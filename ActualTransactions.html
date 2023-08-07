@@ -1,0 +1,103 @@
+<!--
+I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Nur Farhah Binte Mohamed Najeeb Mattar
+ Student ID: 22011345
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 30 July 2023 1:13pm
+ 
+    -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="png" href="images/TUAlogo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <!--Bootstrap CSS Link--><!--EXTERNAL CSS-->
+        <script src="script.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Transaction</title>
+    </head>
+    <body>
+        <header>
+            <nav>    
+            <div class="header">
+                <li><a class="active" href="index.html"><b>ABOUT US</b></a></li>
+                    <li><a class="active" href="Services.html"><b>SERVICES</b></a></li>
+                    <li><a class="active" href="ActualTransactions.html"><b>TRANSACTIONS</b></a></li>
+                    <li style="float: right;" ><a href="#language"><i class="fa fa-globe"></i></a>
+                    <li style="float: right;"><a  class="active" href="Login.html"><b>LOGIN</b></a></li>  
+                    <br>
+                    <div class="search-container" style="float: right;">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>    
+            </nav>
+            </header>
+            <div class="jumbotron text-center">
+            <h1 style="color: rgb(0, 0, 0); margin-top: 20px;">TRANSACTIONS<b style="color: red;">*</b></h1>
+        </div> 
+        <div class="mainpage-image" class="img-responsive">
+            <img class="card-img-top">
+       <div class="mainpage-image">
+            <img src="images/payment.jpg" class="mainpage-image" alt="A pic of making payment" height="1000px"width="1850px">
+            <div class="overlay">
+                <img src="images/TUAlogo.png" width="200px"height="200px" style="margin-top: -759px;">
+
+                <div id="transactionbox" style="margin-top: -490px;height: 1000px;">
+
+                    <label for="Service" style="margin-top: 80px;color: whitesmoke;"><b>Service Chosen (Bond, Credit, Interest, Equity)<b style="color: coral;">*</b></b></label>
+                    <select required>
+                        <option id="Service"></option>
+                        <option value="ELB">Equity-Linked Bond</option>
+                        <option value="CLN">Credit-Linked Note</option>
+                        <option value="BLN">Bond-Linked Note</option>
+                        <option value="IRL">Interest-Rate Linked</option>
+                    </select>
+                    <br>
+                    <label for="timeline" style="margin-top: 10px;color: whitesmoke;"><b>Period of Time (6 Months, 1 Year etc.)</b><b style="color: coral;">*</b></label>
+                    <select required>
+                        <option id="timeline"></option>
+                        <option value="less">Less than 1 month</option>
+                        <option value="1Month">1 month</option>
+                        <option value="3Month">3 Months</option>
+                        <option value="6Month">6 Months</option>
+                        <option value="1Year">1 Year</option>
+                        <option value="5Year">5 Years</option>
+                        <option value="more">More than 5 years</option>
+                    </select>
+                    <br>
+                    <label for="date" style="margin-top: 10px;color: whitesmoke;"><b>Preffered Date of appoinment</b><b style="color: coral;">*</b></label>
+                    <br>
+                    <input type="date" id="date" required>
+                    <br>
+                    <label for="Advisory" style="margin-top: 10px;color: whitesmoke;"><b>Preffered Financial Advisory (If not applicable, 'NIL' IS REQUIRED)</b></label>
+                    <br>
+                    <input type="Advisory" id="Advisory">
+                    <br>
+                    <h6 style="color: white;"><b style="color: coral;">*</b>Compulsory field</h6>
+                    <h6 style="color: white;"><b style=color:red;>*</b>Read Terms and Conditions below</h6>
+                    <br>
+                    <button type="submit" onclick="Apply()">Apply</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    <div style="margin-top: -650px;text-align: center;">
+    <h5><b style=color:red>*</b>Terms and Conditions</h5>
+    <p style="font-size: 15px;"><br><b>You consent us in getting data from your personal information. </b> 
+    <br> By expressing your interest, we will go through with your transaction as quickly as possible, based on availability.
+    <br>This may prevent you from working with your preferred financial advisor (if applicable). 
+    <br>You are allowed to make payment <b>before or after</b> meeting with your financial advisor.
+    <br> If you fail to make payment before the due date, We will contact you frequently. </p>
+    <h6 style="text-align: center;">Thanks for working with us! Our financial advisor will personally contact through email or phone number.</h6>
+    </div>
+    <footer>
+        <p style="margin-top: 300px;">&copy;Copyright 2023 Trust Us Advisory Reg No. 123456789A. All Rights Reserved
+    </p>
+    </footer>
+    </html>

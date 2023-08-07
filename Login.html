@@ -1,0 +1,94 @@
+<!--
+I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Nur Farhah Binte Mohamed Najeeb Mattar
+ Student ID: 22011345
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 2 August 2023 9:09pm
+ 
+    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="images/TUAlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!--Bootstrap CSS Link--><!--EXTERNAL CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+ 
+    <title>Login Page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header">
+                <li><a class="active" href="index.html"><b>ABOUT US</b></a></li>
+                <li><a class="active" href="Transactions.html"><b>TRANSACTIONS</b></a></li>
+                <li style="float: right;"><a href="#language"><i class="fa fa-globe"></i></a>
+                <li style="float: right;"><a class="active" href="Login.html"><b>LOGIN</b></a></li>
+                <div class="dropdown">
+                    <button class="dropbtn"><b>SERVICES</b></button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Go Back To Homepage</a>
+                    </div>
+                </div>
+                <br>
+                <div class="search-container" style="float: right;">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="loginPage">
+        <img src="images/TUAlogo.png" width="70px" height="70px" style="margin-left: -725px;">
+        <h1 style="margin-top: -60px;">Login</h1>
+        <br>
+        <label for="Username" style="margin-top: 80px;">Enter Username <b style="color: coral;">*</b></label>
+        <div><input type="text" id="Username" size="50px" minlength="5" required></div>
+        <br>
+        <label for="Password">Enter Password <b style="color: coral;">*</b></label>
+        <div><input type="text" id="Password" size="50px" minlength="12" required></div>
+        <br>
+
+        <label for="otp">OTP:</label>
+        <br>
+        <br>
+        <div class="container">
+            <div class="input" style="margin-left: 265px;">
+                <input type="text" id="otp" style="width: 100px;margin-left: 80px;" minlength="4" maxLength="4" pattern="\d{4}"
+                    required>
+                <br>
+            </div>
+            <br>
+            <button type="submit" style="margin-left: 25px;" onclick="verification()">Verify OTP </button>
+        </div>
+        <br>
+        <button type="submit" onclick="Login()">Login Account</button>
+        <label style="font-size: 15px;"><a href="Signup.html">Not a member? Sign up now!</a></label>
+        <hr>
+        <p>or</p>
+        <hr>
+        <br>
+        <h1>Login with Singpass</h1>
+        <br>
+        <br>
+        <div><img src="images/frame.png" width="400px" height="450px" alt="log in" onclick="loginSingpass()" ></div>
+        <br>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p style="margin-top: 50px;">&copy;Copyright 2023 Trust Us Advisory Reg No. 123456789A. All Rights Reserved
+    </p>
+</footer>
+
+</html>

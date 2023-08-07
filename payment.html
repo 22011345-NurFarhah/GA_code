@@ -1,0 +1,81 @@
+<!--
+I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Nur Farhah Binte Mohamed Najeeb Mattar
+ Student ID: 22011345
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 5 August 2023 12:54 pm
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="images/TUAlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!--Bootstrap CSS Link--><!--EXTERNAL CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="payment.js" ></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AWBfe3q38FdlL90PTVvJ1zj0gn4VZskBQOjGZ7mrkyAHdXuGzKSde6NQAo-ue-qPKHFfKCzKx7yi3XWu"></script>
+    <title>Payment</title>
+</head>
+<header>
+    <nav>
+        <div class="header">
+            <li><a class="active" href="index.html"><b>ABOUT US</b></a></li>
+            <li><a class="active" href="Services.html"><b>SERVICES</b></a></li>
+            <li><a class="active" href="ActualTransactions.html"><b>TRANSACTIONS</b></a></li>
+            <li style="float: right;"><a href="language.html"><i class="fa fa-globe"></i></a></li>
+            <li style="float: right;"><a class="active" href="Login.html"><b>LOGIN</b></a></li>
+            <br>
+            <div class="search-container" style="float: right;">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+    </nav>
+</header>
+
+<body>
+    <div class="paymentbase">
+        <h2>Payment Page</h2>
+        <h4>User Account</h4>
+
+        <div class="group-input">
+            <div class="payment-input">
+                <div><input type="radio" name="pay" id="paymentCard" value="card" checked>Debit Card / Credit Card
+                    <img src="images/mastercard.png"><img src="images/visa.png" width="80px"><img
+                        src="images/American-Express.png" width="80px"><img src="images/NETS.jpg" width="80px">
+                </div>
+                <div><label style="font-size: 15px;">Card Number</label>
+                    <input type="tel" id="cardNumber" pattern="[345][0-5][0-9]{2}-[0-9]{4}-[0-9]{4}-[0-9]*"
+                        placeholder="Debit/Credit Card Number">
+                    <i class="fa fa-credit-card"></i>
+                </div>
+                <div><label style="font-size: 15px;">Cardholder Name</label>
+                    <input type="text" placeholder="Cardholder Name" id="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div><label style="font-size: 15px;">Expiry Date (MM/YY)</label>
+                    <input type="month" id="expiryDate" name="MM/YY">
+                </div>
+                <div><label style="font-size: 15px;">CVC/CVV (4 digits)</label>
+                    <input type="number" id="cvc" name="CVC/CVV" minlength="4" maxlength="4">
+                </div>
+                <br>
+                <div>
+                    <input type="radio" name="pay" id="paymentPayPal" value="paypal" checked>Pay with PayPal<img
+                        src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg"
+                        style="margin-left: 70px;" alt="PayPal Logo">
+
+                </div>
+                <br>
+                <button type="submit" onclick="processPayment()">PAY NOW</button>
+            </div>
+        </div>
+</body>
+
+</html>
