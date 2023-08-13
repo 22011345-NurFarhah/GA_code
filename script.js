@@ -6,7 +6,7 @@ I declare that this code was written by me.
  Student Name: Nur Farhah Binte Mohamed Najeeb Mattar
  Student ID: 22011345
  Class: C369-3D-E63C-A
- Date/Time Last modified: 3 August 2023 9:09pm
+ Date/Time Last modified: 13 August 2023 9:09pm
 */
 //Login - hardcode
 function Login() {
