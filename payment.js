@@ -52,5 +52,6 @@ function checkCard() {
                 label: 'pay',
             }
         }).render('#paypal-button-container');
+        document.getElementById('paypal-button-container').innerHTML = "Payment has been made. Thank you";
     }
 }
