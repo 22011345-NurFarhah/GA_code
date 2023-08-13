@@ -32,8 +32,8 @@ function processPayment() {
         } else {
             alert("Please fill in ALL of your card information.");
         }
-    } else if (paymentMethod === "paypal") {
-
+    } else if (paymentMethod === "paymentPayPal") {
+        location.href = "ConfirmPayment.html";
     }
 }
 function checkCard() {
@@ -52,6 +52,6 @@ function checkCard() {
                 label: 'pay',
             }
         }).render('#paypal-button-container');
-        
+        document.getElementById('paypal-button-container').innerHTML = "Payment has been made. Thank you";
     }
 }
