@@ -60,18 +60,17 @@ I declare that this code was written by me.
 
                     <div id="card" style="visibility: hidden;">
                         <label style="font-size: 15px;"><b>Card Number :</b></label>
-                        <input type="tel" id="cardNumber" pattern="[345][0-5][0-9]{2}-[0-9]{4}-[0-9]{4}-[0-9]*"
-                            placeholder="Debit/Credit Card Number" style="margin-left: 70px;">
+                        <input type="tel" id="cardNumber" 
+                            placeholder="e.g. 3242-4567-8863-6657" style="margin-left: 70px;width: 200px;">
                         <i class="fa fa-credit-card"></i><br>
                         <label style="font-size: 15px;"><b>Cardholder Name :</b></label>
-                        <input type="text" placeholder="Cardholder Name" id="name" style="margin-left: 40px;">
+                        <input type="text" placeholder="Cardholder Name" id="name" style="margin-left: 40px;width: 200px;">
                         <i class="fa fa-user icon"></i>
                         <br>
                         <label style="font-size: 15px;"><b>Expiry Date (MM/YY) :</b></label>
-                        <input type="month" id="expiryDate" name="MM/YY" style="margin-left: 15px;width:185px;"><br>
+                        <input type="month" id="expiryDate" name="MM/YY" style="margin-left: 15px;width:200px;"><br>
                         <label style="font-size: 15px;"><b>CVC/CVV (3 digits) :</b></label>
-                        <input type="text" id="cvc" name="CVC/CVV" minlength="3" maxlength="3"
-                            style="margin-left: 35px;" pattern="[0-9]{3}" required>
+                        <input type="text" id="cvc" name="CVC/CVV" style="margin-left: 35px;width:200px;" maxlength="3" required>
                     </div>
                 </div>
                 <br>

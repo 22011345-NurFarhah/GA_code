@@ -26,15 +26,27 @@ function processPayment() {
         var expiryDate = document.getElementById("expiryDate").value;
         var cvc = document.getElementById("cvc").value;
 
-        if (cardNumber != "" && cardholderName != "" && expiryDate != "" && cvc != "") {
+        const cardNumberMatch = "[345][0-5][0-9]{2}-[0-9]{4}-[0-9]{4}-[0-9]*";
+        const cvcMatch = "[0-9]{3}";
+        if (cardNumber.match(cardNumberMatch) && cardholderName != "" && expiryDate != "" && cvc.match(cvcMatch)) {
             alert("Payment Successful");
             location.href = "ConfirmPayment.html";
-        } else {
-            alert("Please fill in ALL of your card information.");
+        } else if (!cardNumber.match(cardNumberMatch) && cardholderName == "" && expiryDate == "" && !cvc.match(cvcMatch)) {
+            alert("Please fill in ALL your information before submitting");
+        } else if (!cardNumber.match(cardNumberMatch)) {
+            alert("Please match the format for cardNumber");
+            alert("Please start your card number with the digit: 3/4/5")
+        } else if (cardholderName == "") {
+            alert("Please fill in your name.");
+        } else if (expiryDate == "") {
+            alert("Please fill in your card expiry date.");
+        } else if (!cvc.match(cvcMatch)) {
+            alert("Please match the format for CVC");
+            alert("Please use number digits only.")
         }
-    } else if (paymentMethod === "paymentPayPal") {
-        location.href = "ConfirmPayment.html";
     }
+    //  } else if (paymentMethod === "paymentPayPal") {
+    //   location.href = "ConfirmPayment.html";
 }
 function checkCard() {
     if (document.getElementById('Creditcard').checked) {
@@ -46,10 +58,13 @@ function checkCard() {
         document.getElementById('paypal-button-container').innerHTML = '';
         paypal.Buttons({
             style: {
-                layout: 'horizontal',
+                layoutc: 'horizontal',
                 color: 'black',
                 shape: 'rect',
                 label: 'pay',
+            },
+            onApprove: function (data, actions) {
+                window.location.href = "ConfirmPayment.html";
             }
         }).render('#paypal-button-container');
     }

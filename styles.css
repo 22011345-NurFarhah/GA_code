@@ -363,6 +363,18 @@ label{
   flex-direction: column;
 }
 
+/*transaction history page*/
+#historybox{
+  border-radius: none;
+  width: 800px;
+  height: 500px;
+  background-color:white;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style:solid;
+  margin-left : 350px;
+  margin-top : 50px;
+  text-align: center;
+}
 /* footer */
 footer p{
 text-align: left;
